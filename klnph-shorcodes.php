@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: BMI Calculator Shortcode
- * Description: BMI Calculator Shortcode
+ * Plugin Name: KLNPH Shortcode
+ * Description: KLNPH Shortcode
  * Author: Viacheslav Adishchev
- * Version: 1.0
+ * Version: 1.0.1
  */
  
  if ( ! defined( 'ABSPATH' ) ) {
@@ -44,26 +44,29 @@ add_shortcode('klnph_bmi', function($attrs) {
                         кг
                     </div>
                 </div>
-                <div class="bmi-row">
-                    <div class="bmi-cell"></div>
-                    <div class="bmi-cell bmi__result">
-                        <span>Индекс массы тела</span>
-                        <div class="bmi__value"></div>
-                    </div>
-                </div>
             </div>
         </form>
+
+        <div class="bmi__result">
+            <span>Индекс массы тела</span>
+            <div class="bmi__result-value"></div>
+            <div class="bmi__result-info"></div>
+        </div>
         <div class="bmi__chart">
             <div class="bmi__marker">&#9660;</div>
         </div>
         <div class="bmi__chart">
-            <div class="bmi__range bmi__thinnes" data-bmi="18.5">&lt; 18.5</div>
-            <div class="bmi__range bmi__normal" data-bmi="25">18.5&ndash;25</div>
-            <div class="bmi__range bmi__overweight" data-bmi="30">25&ndash;30</div>
-            <div class="bmi__range bmi__obese" data-bmi="35">&gt; 30</div>
+            <div class="bmi__range bmi__thinnes" data-bmi="14" data-title="Выраженный дефицит массы тела"></div>
+            <div class="bmi__range bmi__thinnes" data-bmi="16" data-title="Выраженный дефицит массы тела">&lt; 16</div>
+            <div class="bmi__range bmi__thinnes" data-bmi="18.5" data-title="Недостаточная (дефицит) масса тела">16&ndash;18.5</div>
+            <div class="bmi__range bmi__normal" data-bmi="25" data-title="Норма">18.5&ndash;25</div>
+            <div class="bmi__range bmi__overweight" data-bmi="30" data-title="Избыточная масса тела (предожирение)">25&ndash;30</div>
+            <div class="bmi__range bmi__obese" data-bmi="35" data-title="Ожирение первой степени">30&ndash;35</div>
+            <div class="bmi__range bmi__obese" data-bmi="40" data-title="Ожирение второй степени">35&ndash;40</div>
+            <div class="bmi__range bmi__obese" data-bmi="42" data-title="Ожирение третьей степени (морбидное)">&gt; 40</div>
         </div>
 
-        <script src="<?= plugin_dir_url( __FILE__ ) ?>bmi/script.js"></script>
+        <script src="<?= plugin_dir_url( __FILE__ ) ?>bmi/script.js?ver=1.0.2"></script>
     </div>
 
 <?php
