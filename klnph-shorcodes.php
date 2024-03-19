@@ -3,7 +3,7 @@
  * Plugin Name: KLNPH Shortcode
  * Description: KLNPH Shortcode
  * Author: Viacheslav Adishchev
- * Version: 1.0.1
+ * Version: 1.0.1   
  */
  
  if ( ! defined( 'ABSPATH' ) ) {
@@ -18,7 +18,7 @@ add_shortcode('klnph_bmi', function($attrs) {
 
     ob_start(); ?>
 
- <link rel="stylesheet" href="<?= plugin_dir_url( __FILE__ ) ?>bmi/style.css">
+ <link rel="stylesheet" href="<?= plugin_dir_url( __FILE__ ) ?>bmi/style.css?ver=1.0.1">
     <div class="bmi">
         <form autocomplete="off">
             <div class="bmi__form">
