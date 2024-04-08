@@ -1,5 +1,5 @@
 {
-    "name": "adishchev/klnph_shortcodes",
+    "name": "adishchev/klnph-shortcodes",
     "description": "KLNPH shortcodes for WordPress",
     "type": "wordpress-plugin",
     "require": {
